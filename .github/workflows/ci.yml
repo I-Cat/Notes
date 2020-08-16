@@ -1,3 +1,4 @@
+fi
 name: CI/PR
 
 on: [push, pull_request]
