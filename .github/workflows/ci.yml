@@ -17,7 +17,7 @@ jobs:
             git -c protocol.version=2 clone \
               --no-tags \
               --single-branch \
-              -b ci-config \
+              -b  \
               --depth 1 \
               --no-checkout \
               --filter=blob:none \
@@ -32,7 +32,7 @@ jobs:
             if test -x config-repo/ci/config/allow-ref &&
                ! config-repo/ci/config/allow-ref '${{ github.ref }}'
             then
-              enabled=no
+#              enabled=no
 #            fi
             echo "::set-output name=enabled::$enabled"
 
