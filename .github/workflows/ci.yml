@@ -11,7 +11,7 @@ jobs:
       outputs:
         enabled: ${{ steps.check-ref.outputs.enabled }}
       steps:
-        - name: try to clone Notes branch
+        - name: try to clone https://github.com/xbmc/xbmc branch
           continue-on-error: true
           run: |
             git -c protocol.version=2 clone \
@@ -33,7 +33,7 @@ jobs:
                ! config-repo/ci/config/allow-ref '${{ github.ref }}'
             then
               enabled=no
-            fi
+#            fi
             echo "::set-output name=enabled::$enabled"
 
   windows-build:
