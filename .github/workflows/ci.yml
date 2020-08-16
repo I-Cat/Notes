@@ -11,7 +11,7 @@ jobs:
       outputs:
         enabled: ${{ steps.check-ref.outputs.enabled }}
       steps:
-        - name: try to clone ci-config branch
+        - name: try to clone Notes branch
           continue-on-error: true
           run: |
             git -c protocol.version=2 clone \
